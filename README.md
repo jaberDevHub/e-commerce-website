@@ -119,41 +119,6 @@ Mobile Experience
 - Push Notifications: Order updates and special offers
 - Mobile-First Design: Optimized for mobile users
 
-Configuration
-
-Environment Variables
-Create a `.env.local` file in the root directory:
-
-```env
-VITE_API_URL=http://localhost:3000/api
-VITE_STRIPE_PUBLIC_KEY=your_stripe_public_key
-VITE_GOOGLE_ANALYTICS_ID=your_ga_id
-```
-
-Tailwind Configuration
-The project uses a custom Tailwind configuration with:
-- Custom color palette for eco-themed branding
-- Extended animations and transitions
-- Responsive breakpoints
-- Custom component styles
-
-Testing
-
-The project includes comprehensive testing:
-- Unit Tests: Component and utility function testing
-- Integration Tests: User flow testing
-- E2E Tests: End-to-end testing with Playwright (planned)
-
-```bash
-# Run all tests
-npm run test
-
-# Run tests in watch mode
-npm run test:watch
-
-# Generate coverage report
-npm run test:coverage
-```
 
 Performance
 
@@ -169,37 +134,6 @@ Performance Metrics
 - Core Web Vitals: Optimized for user experience
 - Bundle Size: < 200KB gzipped
 - Load Time: < 2 seconds on 3G
-
-Deployment
-
-Vercel (Recommended)
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-```
-
-Netlify
-```bash
-# Build
-npm run build
-
-# Deploy dist/ folder to Netlify
-```
-
-Docker
-```dockerfile
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-COPY . .
-RUN npm run build
-EXPOSE 3000
-CMD ["npm", "run", "preview"]
-```
 
 Contributing
 
